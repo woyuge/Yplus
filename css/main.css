@@ -1,0 +1,131 @@
+.head{
+	width:1024px;
+	margin:0 auto;
+}
+.head .logo
+{
+	position:relative;
+	left:25px;
+	top:30px;
+}
+.left
+{
+	float:left;
+	height:78px;
+	width:700px;
+}
+ .right {
+    margin-left: 700px;
+    min-width:  340px;
+}
+
+#nav{
+	float:left;
+	font-size: 14px;
+    height: 78px;
+    line-height: 78px;
+}
+#nav li {
+    float: left;
+	margin-right:1px;
+	list-style:none
+}
+#nav li > a {
+    display: block;
+    height: 78px;
+    padding: 0 17px;
+}
+#nav li > a.active {
+    background: url("../images/navbottom.jpg") no-repeat bottom center;
+    color: #5bbd5d;
+}
+ .fix:after {
+	clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+#intro{
+	padding: 35px 0 35px 20px;
+}
+.list{
+	display: inline;
+    float: left;
+    margin: 0 0px 0 0px;
+    width: 285px;
+	padding: 0 0 0 95px;
+	background:url("../images/intro.jpg") no-repeat left center;
+}
+.list dt {
+    line-height: 20px;
+    padding: 0 0 0px;
+	text-indent:-999999px;
+}
+
+.list dd {
+    line-height: 25px;
+	padding: 0px 0 0 0;
+	margin-top:35px;
+	width:180px;
+}
+.list_pos1{
+	background:url("../images/intro.jpg") no-repeat -370px center;
+	width:275px;
+}
+.list_pos1 dd{
+	padding-left: 10px;
+}
+.list_pos2{
+	width:100px;
+	background:url("../images/intro.jpg") no-repeat -740px center;
+}
+.list_pos2 dd{
+	margin-left: -25px;
+}
+#content{
+	margin:0 auto;
+	width:1024px;
+}
+#footer{
+	width:1004px;
+	margin:0 auto;
+	background:#f5f5f5;
+	padding:50px 0px 50px 40px;
+}
+#footer .flist{
+	display: inline;
+    float: left;
+    margin: 0 20px 0 0;
+    width: 270px;
+	padding: 0 0 0 0;
+	color:#333333;
+	
+}
+#footer  .flist dt {
+    line-height: 20px;
+    padding: 0 0 5px;
+	font-size:12px;
+}
+ #footer .flist dd {
+    line-height: 20px;
+	font-size:12px;
+}
+.inline{
+	display:inline-block;
+	height:84px;
+	width:180px;
+	line-height:84px;
+	text-indent:90px;
+	background:url(../images/connent.jpg) no-repeat left center;
+}
+.consult{
+	margin: 0 0 0 20px;
+	display:inline-block;
+	height:84px;
+	text-indent:90px;
+	line-height:84px;
+	width:180px;
+	background : url(../images/connent.jpg) no-repeat -210px center;
+}
