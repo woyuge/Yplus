@@ -1,3 +1,13 @@
+#menu{
+	box-shadow: 0 1px 3px 0 #000000;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+	background:#fff;
+	opacity:0.97;
+}
 .head{
 	width:1024px;
 	margin:0 auto;
@@ -8,6 +18,7 @@
 	left:25px;
 	top:30px;
 }
+
 .left
 {
 	float:left;
@@ -48,7 +59,8 @@
     visibility: hidden;
 }
 #intro{
-	padding: 35px 0 35px 20px;
+	padding: 40px 0 40px 0px;
+	margin-top:15px;
 }
 .list{
 	display: inline;
@@ -56,39 +68,52 @@
     margin: 0 0px 0 0px;
     width: 285px;
 	padding: 0 0 0 95px;
-	background:url("../images/intro.jpg") no-repeat left center;
+	background:url("../images/icon.png") no-repeat -110px -15px;
+}
+.list:hover{
+	background:url("../images/icon_h.png") no-repeat -110px -15px;
+	color:#5bbd5d;
+}
+.list_pos1:hover{
+	background:url("../images/icon_h.png") no-repeat -100px -128px;
+}
+.list_pos2:hover{
+	background:url("../images/icon_h.png") no-repeat -105px -268px;
 }
 .list dt {
-    line-height: 20px;
-    padding: 0 0 0px;
-	text-indent:-999999px;
+    padding:0 0 0 0px;
+	font-size:24px;
 }
 
 .list dd {
-    line-height: 25px;
+    line-height: 20px;
 	padding: 0px 0 0 0;
-	margin-top:35px;
+	margin-top:20px;
 	width:180px;
 }
 .list_pos1{
-	background:url("../images/intro.jpg") no-repeat -370px center;
+	background:url("../images/icon.png") no-repeat -100px -128px;
 	width:275px;
 }
 .list_pos1 dd{
-	padding-left: 10px;
+	
 }
 .list_pos2{
 	width:100px;
-	background:url("../images/intro.jpg") no-repeat -740px center;
+	background:url("../images/icon.png") no-repeat -105px -268px;
 }
 .list_pos2 dd{
-	margin-left: -25px;
+	
 }
 #content{
 	margin:0 auto;
 	width:1024px;
 }
 #footer{
+	width:100%;
+	background:#f5f5f5;
+}
+.fwarp{
 	width:1004px;
 	margin:0 auto;
 	background:#f5f5f5;
@@ -112,20 +137,21 @@
     line-height: 20px;
 	font-size:12px;
 }
-.inline{
+.inline,.consult{
 	display:inline-block;
 	height:84px;
 	width:180px;
 	line-height:84px;
 	text-indent:90px;
-	background:url(../images/connent.jpg) no-repeat left center;
+	background:#ededed url(../images/icon.png) no-repeat -110px -400px;
 }
 .consult{
 	margin: 0 0 0 20px;
-	display:inline-block;
-	height:84px;
-	text-indent:90px;
-	line-height:84px;
-	width:180px;
-	background : url(../images/connent.jpg) no-repeat -210px center;
+	background:#ededed url(../images/icon.png) no-repeat -110px -520px;
+}
+.inline:hover{
+	background:#ededed url(../images/icon_h.png) no-repeat -109px -400px;
+}
+.consult:hover{
+	background:#ededed url(../images/icon_h.png) no-repeat -109px -520px;
 }

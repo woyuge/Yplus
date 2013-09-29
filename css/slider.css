@@ -25,7 +25,7 @@ img {
 ---| Header | ***/
 header {
 	width: 100%;
-	margin: 0 auto;
+	margin: 78px auto 0 auto;
 	position: relative;
 	color: #ffffff;
 	/* background: url(images/layout/bg-header.png) repeat-x 0 0; */
@@ -65,15 +65,15 @@ header .header-content a {
 	box-shadow: inset 0px 10px 8px -10px rgba(0,0,0,0.5), inset 0px -10px 8px -10px rgba(0,0,0,0.4);
 }
 .header-content.home {
-	height: 362px;
+	height: 400px;
 }
 
 .home .header-content { background: #d54515 url(../images/slider-gradient-bg.png) repeat-y 50% 0; }
 
 /*.header-content-wrap {width: 940px; margin: 0 auto;}*/
-.header-content img {float: left; margin: 0 0 0 15px;}
-.header-content .text {width:470px; margin-left: 50%; *width:430px; }
-.header-content .copy {font-size: 14px; line-height: 21px; padding-right: 15px;}
+.header-content img {float:right;margin: 0 0 0 15px;}
+.header-content .text {width:470px;  *width:430px; padding-top:30px;}
+.header-content .copy {font-size: 18px; line-height: 21px; padding-right: 15px;}
 .header-content .button {width: 100% !important;}
 .header-content .button a {padding-top: 7px; padding-bottom: 7px; font-size: 14px; display: inline-block;}
 
@@ -96,14 +96,14 @@ header .header-content a {
 #slider-wrap
 {
     background: url(../images/header-background1.png?v=1) repeat-x 0% 0;
-    height:362px; 
+    height:400px; 
 }
 
 #slider 
 {
     background: url(../images/header-background2.png?v=1) repeat-x 0% 0;
     height:332px;
-    padding-top: 30px;
+    padding-top: 50px;
 }
 
 /* => SLIDE PREV AND NEXT ARROWS <= */
@@ -191,13 +191,16 @@ header .header-content a {
 
 .header-content h2 
 {
-	font:400 32px/1.2 "microsoft yahei", Tahoma, arial, sans-serif;
+	font:400 28px/1.2 "microsoft yahei", Tahoma, arial, sans-serif;
 	color: #fff;
-	margin: 0 0 26px;
+	margin: 0 0 30px;
+	text-align:right;
 }
 .header-content p 
 {
+	font:400 18px/1.2 "microsoft yahei", Tahoma, arial, sans-serif;
     margin: 0 0 30px;
+	text-align:right;
 }
 
 .header-content .centered-content
