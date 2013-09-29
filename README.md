@@ -1,4 +1,0 @@
-Yplus
-=====
-
-Yplus designSpace
