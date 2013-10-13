@@ -51,7 +51,7 @@ header .header-content a {
 
 .header-content 
 {
-    background: url(../images/header-background.jpg?v=1) no-repeat 50% -4px #d64516;
+    background: url(../images/header-background.jpg?v=1) no-repeat 50% -4px #fff;
 	margin: 0;
 	padding: 0;
 	float: left;
@@ -65,15 +65,15 @@ header .header-content a {
 	box-shadow: inset 0px 10px 8px -10px rgba(0,0,0,0.5), inset 0px -10px 8px -10px rgba(0,0,0,0.4);
 }
 .header-content.home {
-	height: 400px;
+	height: 500px;
 }
 
 .home .header-content { background: #d54515 url(../images/slider-gradient-bg.png) repeat-y 50% 0; }
 
 /*.header-content-wrap {width: 940px; margin: 0 auto;}*/
-.header-content img {float:right;margin: 0 0 0 15px;}
-.header-content .text {width:470px;  *width:430px; padding-top:30px;}
-.header-content .copy {font-size: 18px; line-height: 21px; padding-right: 15px;}
+.header-content img {float:right;margin: 0 0 0 15px;padding-top:30px;}
+.header-content .text {width:470px;  *width:450px; padding-top:100px;}
+.header-content .copy {font-size: 20px; line-height: 21px; padding-right: 15px;}
 .header-content .button {width: 100% !important;}
 .header-content .button a {padding-top: 7px; padding-bottom: 7px; font-size: 14px; display: inline-block;}
 
@@ -96,13 +96,13 @@ header .header-content a {
 #slider-wrap
 {
     background: url(../images/header-background1.png?v=1) repeat-x 0% 0;
-    height:400px; 
+    height:500px; 
 }
 
 #slider 
 {
     background: url(../images/header-background2.png?v=1) repeat-x 0% 0;
-    height:332px;
+    height:450px;
     padding-top: 50px;
 }
 
@@ -191,15 +191,15 @@ header .header-content a {
 
 .header-content h2 
 {
-	font:400 28px/1.2 "microsoft yahei", Tahoma, arial, sans-serif;
+	font:500 28px/1.2 "microsoft yahei", Tahoma, arial, sans-serif;
 	color: #fff;
 	margin: 0 0 30px;
 	text-align:right;
 }
 .header-content p 
 {
-	font:400 18px/1.2 "microsoft yahei", Tahoma, arial, sans-serif;
-    margin: 0 0 30px;
+	font:500 18px/1.2 "microsoft yahei", Tahoma, arial, sans-serif;
+    margin: 0 0 40px;
 	text-align:right;
 }
 
@@ -272,7 +272,7 @@ header .header-content a {
 
 .header-content .beta-ribbons {
     position: absolute; 
-    height: 120px;
+    height: 180px;
     width: 85px;
     text-indent: -200px;
     overflow: hidden;

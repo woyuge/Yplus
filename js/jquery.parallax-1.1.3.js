@@ -19,7 +19,7 @@ http://www.gnu.org/licenses/gpl.html
 		windowHeight = $window.height();
 	});
 
-	$.fn.parallax = function(xpos, speedFactor, outerHeight) {
+	$.fn.parallax = function(xpos, speedFactor, outerHeight, ypos) {
 		var $this = $(this);
 		var getHeight;
 		var firstTop;
@@ -47,19 +47,25 @@ http://www.gnu.org/licenses/gpl.html
 		
 		// function to be called whenever the window is scrolled or resized
 		function update(){
-			var pos = $window.scrollTop();				
-
+			var pos = $window.scrollTop();
 			$this.each(function(){
 				var $element = $(this);
-				var top = $element.offset().top;
+				var top = $element.offset().top-80;
 				var height = getHeight($element);
-
+				var sod = Math.round((firstTop - pos) * speedFactor)
+				
 				// Check if totally above or totally below viewport
-				if (top + height < pos || top > pos + windowHeight) {
+				if (top + height < pos || top > pos + windowHeight ) {
 					return;
 				}
-
-				$this.css('backgroundPosition', xpos + " " + Math.round((firstTop - pos) * speedFactor) + "px");
+				
+				if(!ypos)
+				{
+					$this.css('backgroundPosition', xpos + " " + sod  + "px");
+				}else
+				{
+					$this.css('backgroundPosition', xpos + " " + Math.round(( ypos-pos ) * speedFactor) + "px");
+				}
 			});
 		}		
 
