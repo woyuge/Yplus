@@ -28,6 +28,7 @@ http://www.gnu.org/licenses/gpl.html
 		//get the starting position of each element to have parallax applied to it		
 		$this.each(function(){
 		    firstTop = $this.offset().top;
+			firstTop = 0;
 		});
 
 		if (outerHeight) {
@@ -50,10 +51,9 @@ http://www.gnu.org/licenses/gpl.html
 			var pos = $window.scrollTop();
 			$this.each(function(){
 				var $element = $(this);
-				var top = $element.offset().top-80;
+				var top = $element.offset().top;
 				var height = getHeight($element);
-				var sod = Math.round((firstTop - pos) * speedFactor)
-				
+				var sod = Math.round((firstTop - pos) * speedFactor);
 				// Check if totally above or totally below viewport
 				if (top + height < pos || top > pos + windowHeight ) {
 					return;
@@ -61,7 +61,10 @@ http://www.gnu.org/licenses/gpl.html
 				
 				if(!ypos)
 				{
-					$this.css('backgroundPosition', xpos + " " + sod  + "px");
+					if(Math.abs(sod)<=height*2-160)
+					{
+						$this.css('backgroundPosition', xpos + " " + sod  + "px");
+					}
 				}else
 				{
 					$this.css('backgroundPosition', xpos + " " + Math.round(( ypos-pos ) * speedFactor) + "px");
