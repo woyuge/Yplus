@@ -11,10 +11,19 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('#f1').parallax("50%", 2);
-			$('#second').parallax("50%", 0.1);
-			$('.bg').parallax("50%", 3, '',200);
-
+			$('#second').parallax("50%", 0.5);
+			$('.bg').parallax("30%", 3, '',200);
+			$('#second').click(function(){
+				blockSlide();
+			});
 		})
+		function blockSlide()
+		{
+			$('.yp').stop(true,true).animate({top:'125px',opacity:1},200);
+			$('.shijue').stop(true,true).animate({left:'536',opacity:1},200);
+			$('.jiaohu').stop(true,true).animate({right:'520px',opacity:1},200);
+			$('.sheji').stop(true,true).animate({bottom:'85',opacity:1},200);
+		}
 </script>
 	<style type="text/css">
 		#f1{
@@ -33,6 +42,7 @@
 			margin: 0 auto;
 			overflow: hidden;
 			padding: 0;
+			position:relative;
 		}
 		#f1 .bg{
 			background: url(images/trainers.png) 50% 500px no-repeat fixed;
@@ -42,7 +52,71 @@
 			width: 900px;
 			z-index: 200;
 		}
-
+		.dword
+		{
+			position:absolute;
+			top:50%;
+			left:0;
+			width:100%;
+			text-align:center;
+			font-size:35px;
+		}
+		.blockword{
+			position:absolute;
+			height:145px;
+			width:150px;
+			background:url(images/blockword.png) 0 -5px no-repeat;
+			opacity:0;
+			transition:all 1s ease-in-out;
+			
+		}
+		.yp
+		{
+			left:608px;
+		}
+		.shijue
+		{	/*
+			top:74px;
+			left:536px;
+			*/
+			left:0px;
+			top:199px;
+			background:url(images/blockword.png) 0 -155px no-repeat;
+		}
+		.jiaohu
+		{
+			/*
+			top:75px;
+			right:520px;
+			*/
+			top:200px;
+			right:0px;
+			background:url(images/blockword.png) 0 -303px no-repeat;
+		}
+		.sheji
+		{
+			/**
+				top:145px;
+			*/
+			bottom:0px;
+			left:607px;
+			background:url(images/blockword.png) 0 -450px no-repeat;
+		}
+		#yintro{
+			width:1004px;
+			margin:0 auto 0 auto;
+			padding:35px 0 35px 0;
+			
+		}
+		#yintro h3{
+			font-size:35px;
+			line-height:35px;
+			padding-bottom:10px;
+		}
+		#yintro p{
+			line-height:30px;
+			text-indent:35px;
+		}
 	</style>
  </head>
 
@@ -68,9 +142,18 @@
 	<div style="height:80px"></div>
 	<div id="f1">
 		<div class="bg"></div>
+		<div class="dword">设计以人为本</div>
 	</div> <!--#intro-->
+	<div id="yintro">
+		<h3>关于Y+</h3>
+		<p>Y+设计诞生于2013年，团队聚集了从事界面和交互的设计师，web前端后端的精英工程师，移动开发IOS和安卓精英工程师，Y+设计专注于互联网产品，无线端产品，，提供非凡的视觉设计，卓越的开发</p>
+		<p>我们的理念是"设计以人为本"。始终以“用户”为核心，去设计每一款产品</p>
+	</div>
 	<div id="second">
-		
+		<div class='blockword yp'></div>
+		<div class='blockword shijue'></div>
+		<div class='blockword jiaohu'></div>
+		<div class='blockword sheji'></div>
 	</div> <!--#second-->
 	<div id="footer">
 			<div class="fwarp">

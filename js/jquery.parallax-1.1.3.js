@@ -24,10 +24,13 @@ http://www.gnu.org/licenses/gpl.html
 		var getHeight;
 		var firstTop;
 		var paddingTop = 0;
-		
+		var offetHie;
+		var flag = true;
 		//get the starting position of each element to have parallax applied to it		
 		$this.each(function(){
 		    firstTop = $this.offset().top;
+			offetHid = firstTop;
+			
 			firstTop = 0;
 		});
 
@@ -49,11 +52,26 @@ http://www.gnu.org/licenses/gpl.html
 		// function to be called whenever the window is scrolled or resized
 		function update(){
 			var pos = $window.scrollTop();
+			
 			$this.each(function(){
 				var $element = $(this);
 				var top = $element.offset().top;
 				var height = getHeight($element);
 				var sod = Math.round((firstTop - pos) * speedFactor);
+				if($this.attr('id')=='second')
+				{
+					//console.log((top-pos)+'&'+windowHeight);
+					if( (top - pos)+(height/2) < windowHeight)
+					{
+						
+						if(flag!=false)
+						{
+							console.log((top-pos)+'&'+windowHeight);
+							blockSlide();
+						}
+						flag = false;
+					}
+				}
 				// Check if totally above or totally below viewport
 				if (top + height < pos || top > pos + windowHeight ) {
 					return;
@@ -67,7 +85,10 @@ http://www.gnu.org/licenses/gpl.html
 					}
 				}else
 				{
-					$this.css('backgroundPosition', xpos + " " + Math.round(( ypos-pos ) * speedFactor) + "px");
+					bgypos =Math.round(( ypos-pos ) * speedFactor)
+					bgypos=bgypos>192?bgypos:192;
+					$this.css('backgroundPosition', xpos + " " + bgypos + "px");
+					
 				}
 			});
 		}		
