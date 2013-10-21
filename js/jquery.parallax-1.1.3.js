@@ -88,13 +88,16 @@ http://www.gnu.org/licenses/gpl.html
 				if($this.attr('id')=='f1')
 				{
 				
+				
 					var of = $('.dword').offset().top-pos;
 					if(  (top - pos)<0 )
 					{
 						$('.dword').stop(true,true).animate({left:0,opacity:0},200);
+			
 					}else 
 					{
 						$('.dword').stop(true,true).animate({left:'-45%',opacity:1},200);
+						
 					}
 				}
 				// Check if totally above or totally below viewport
