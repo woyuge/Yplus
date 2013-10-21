@@ -58,18 +58,43 @@ http://www.gnu.org/licenses/gpl.html
 				var top = $element.offset().top;
 				var height = getHeight($element);
 				var sod = Math.round((firstTop - pos) * speedFactor);
+				var se = $('#second');
+				var w = 150;
 				if($this.attr('id')=='second')
 				{
 					//console.log((top-pos)+'&'+windowHeight);
 					if( (top - pos)+(height/2) < windowHeight)
 					{
 						
-						if(flag!=false)
-						{
-							console.log((top-pos)+'&'+windowHeight);
-							blockSlide();
-						}
-						flag = false;
+						//if(flag!=false)
+						//{
+							//console.log((top-pos)+'&'+windowHeight);
+							//blockSlide();
+						//}
+						//flag = false;
+						
+						$('.yp').stop(true,true).animate({top:se.height()/4,opacity:1},200);
+						$('.shijue').stop(true,true).animate({left:(se.width()/2-150),opacity:1},200);
+						$('.jiaohu').stop(true,true).animate({right:(se.width()/2-150),opacity:1},200);
+						$('.sheji').stop(true,true).animate({bottom:'85',opacity:1},200);
+					}else
+					{
+						$('.yp').stop(true,true).animate({top:0,opacity:0},200);
+						$('.shijue').stop(true,true).animate({left:0,opacity:0},200);
+						$('.jiaohu').stop(true,true).animate({right:0,opacity:0},200);
+						$('.sheji').stop(true,true).animate({bottom:0,opacity:0},200);
+					}
+				}
+				if($this.attr('id')=='f1')
+				{
+				
+					var of = $('.dword').offset().top-pos;
+					if(  (top - pos)<0 )
+					{
+						$('.dword').stop(true,true).animate({left:0,opacity:0},200);
+					}else 
+					{
+						$('.dword').stop(true,true).animate({left:'-45%',opacity:1},200);
 					}
 				}
 				// Check if totally above or totally below viewport

@@ -12,16 +12,20 @@
 		$(document).ready(function(){
 			$('#f1').parallax("50%", 2);
 			$('#second').parallax("50%", 0.5);
-			$('.bg').parallax("30%", 3, '',200);
-			$('#second').click(function(){
-				blockSlide();
-			});
+			//$('.bg').parallax("30%", 3, '',200);
+			var se = $('#second');
+			var w = 150;
+			$('.dword').stop(true,true).animate({left:'-45%',opacity:1},200);
+			$('.sheji, .yp').css({left:se.width()/2-w/2});
+			$('.bg').stop(true,true).animate({top:'0'},1000);
 		})
 		function blockSlide()
 		{
-			$('.yp').stop(true,true).animate({top:'125px',opacity:1},200);
-			$('.shijue').stop(true,true).animate({left:'536',opacity:1},200);
-			$('.jiaohu').stop(true,true).animate({right:'520px',opacity:1},200);
+			var se = $('#second');
+			var w = 150
+			$('.yp').stop(true,true).animate({top:se.height()/4,opacity:1},200);
+			$('.shijue').stop(true,true).animate({left:(se.width()/2-150),opacity:1},200);
+			$('.jiaohu').stop(true,true).animate({right:(se.width()/2-150),opacity:1},200);
 			$('.sheji').stop(true,true).animate({bottom:'85',opacity:1},200);
 		}
 </script>
@@ -45,12 +49,14 @@
 			position:relative;
 		}
 		#f1 .bg{
-			background: url(images/trainers.png) 50% 500px no-repeat fixed;
+			background: url(images/trainers.png) 0% bottom no-repeat;
 			height: 500px;
 			padding: 0;
 			position: relative;
 			width: 900px;
 			z-index: 200;
+			top:250px;
+			left:35%;
 		}
 		.dword
 		{
@@ -58,9 +64,12 @@
 			top:50%;
 			left:0;
 			width:100%;
-			text-align:center;
+			opacity:0;
+			text-align:right;
 			font-size:35px;
+			transition:all 1s ease-in-out;
 		}
+		
 		.blockword{
 			position:absolute;
 			height:145px;
@@ -70,36 +79,22 @@
 			transition:all 1s ease-in-out;
 			
 		}
-		.yp
-		{
-			left:608px;
-		}
+		
 		.shijue
-		{	/*
-			top:74px;
-			left:536px;
-			*/
+		{	
 			left:0px;
 			top:199px;
-			background:url(images/blockword.png) 0 -155px no-repeat;
+			background:url(images/blockword.png) 3px -156px no-repeat;
 		}
 		.jiaohu
 		{
-			/*
-			top:75px;
-			right:520px;
-			*/
 			top:200px;
 			right:0px;
-			background:url(images/blockword.png) 0 -303px no-repeat;
+			background:url(images/blockword.png) -3px -303px no-repeat;
 		}
 		.sheji
 		{
-			/**
-				top:145px;
-			*/
 			bottom:0px;
-			left:607px;
 			background:url(images/blockword.png) 0 -450px no-repeat;
 		}
 		#yintro{
@@ -139,7 +134,7 @@
 			</div>
 		</div>
 	</div>
-	<div style="height:80px"></div>
+	<div style="height:79px"></div>
 	<div id="f1">
 		<div class="bg"></div>
 		<div class="dword">设计以人为本</div>
