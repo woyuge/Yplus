@@ -73,16 +73,16 @@ http://www.gnu.org/licenses/gpl.html
 						//}
 						//flag = false;
 						
-						$('.yp').stop(true,true).animate({top:se.height()/4,opacity:1},200);
-						$('.shijue').stop(true,true).animate({left:(se.width()/2-150),opacity:1},200);
-						$('.jiaohu').stop(true,true).animate({right:(se.width()/2-150),opacity:1},200);
-						$('.sheji').stop(true,true).animate({bottom:'85',opacity:1},200);
+						$('.yp').stop().animate({top:se.height()/4,opacity:1},1000);
+						$('.shijue').stop().animate({left:(se.width()*45/100-w/2),opacity:1},1000);
+						$('.jiaohu').stop().animate({right:(se.width()-($('.yp').position().left+w/2)-w),opacity:1},1000);
+						$('.sheji').stop().animate({bottom:'85',opacity:1},1000);
 					}else
 					{
-						$('.yp').stop(true,true).animate({top:0,opacity:0},200);
-						$('.shijue').stop(true,true).animate({left:0,opacity:0},200);
-						$('.jiaohu').stop(true,true).animate({right:0,opacity:0},200);
-						$('.sheji').stop(true,true).animate({bottom:0,opacity:0},200);
+						$('.yp').stop().animate({top:0,opacity:0},1000);
+						$('.shijue').stop().animate({left:0,opacity:0},1000);
+						$('.jiaohu').stop().animate({right:0,opacity:0},1000);
+						$('.sheji').stop().animate({bottom:0,opacity:0},1000);
 					}
 				}
 				if($this.attr('id')=='f1')
@@ -92,11 +92,11 @@ http://www.gnu.org/licenses/gpl.html
 					var of = $('.dword').offset().top-pos;
 					if(  (top - pos)<0 )
 					{
-						$('.dword').stop(true,true).animate({left:0,opacity:0},200);
+						$('.dword').stop().animate({left:0,opacity:0},1000);
 			
 					}else 
 					{
-						$('.dword').stop(true,true).animate({left:'-45%',opacity:1},200);
+						$('.dword').stop().animate({left:'-45%',opacity:1},1000);
 						
 					}
 				}
