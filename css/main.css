@@ -35,20 +35,32 @@
 	font-size: 14px;
     height: 78px;
     line-height: 78px;
+	position:relative;
 }
 #nav li {
     float: left;
-	margin-right:1px;
+	margin-right:0px;
 	list-style:none
 }
 #nav li > a {
     display: block;
     height: 78px;
     padding: 0 17px;
+	position:relative;
 }
 #nav li > a.active {
-    background: url("../images/navbottom.jpg") no-repeat bottom center;
+    /*background: url("../images/navbottom.jpg") repeat-x bottom center;*/
     color: #5bbd5d;
+}
+#nav li .lava{
+	display:block;
+	position:absolute;
+	left:0px;
+	height:2px;
+	background:#5bbd5d;
+	bottom:0px;
+	width:0px;
+	padding:0;
 }
  .fix:after {
 	clear: both;
