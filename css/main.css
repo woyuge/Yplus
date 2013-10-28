@@ -203,6 +203,31 @@
 	text-indent:90px;
 	background:#ededed url(../images/icon.png) no-repeat -110px -400px;
 }
+.se_bg{background:#f7f5f5}
+.se_list{height:183px;padding: 70px 0 70px 0;margin:0 auto;width:1004px;}
+.line{border-top:1px solid #e6e6e6;}
+.se_word{margin-left:230px;}
+.se_list img{
+	float:left;
+}
+.se_list h3{
+	font-size:24px;
+	font-weight:bold;
+	padding: 40px 0 0 0;
+}
+
+.se_list p{
+	line-height:30px;
+}
+.se_r img{
+	float:right;
+}
+.se_r .se_word{
+	margin-left:0px;
+}
+
+
+
 .consult{
 	margin: 0 0 0 20px;
 	background:#ededed url(../images/icon.png) no-repeat -110px -520px;
