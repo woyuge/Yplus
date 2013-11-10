@@ -11,7 +11,8 @@ html {
 }
 body {
 	/*font: 13px/18px 'lucida sans regular','lucida sans',arial,helvetica,sans-serif;*/
-	font: 13px/21px 'Lucida Sans Unicode', 'Lucida Grande', Arial, Helvetica, sans-serif;
+	/*font: 13px/21px 'Lucida Sans Unicode', 'Lucida Grande', Arial, Helvetica, sans-serif;*/
+	font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu
 	color: #444; 
 	min-width: 940px;
 	height: 100%;

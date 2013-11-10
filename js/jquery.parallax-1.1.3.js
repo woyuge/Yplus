@@ -56,6 +56,7 @@ http://www.gnu.org/licenses/gpl.html
 			$this.each(function(){
 				var $element = $(this);
 				var top = $element.offset().top;
+				
 				var height = getHeight($element);
 				var sod = Math.round((firstTop - pos) * speedFactor);
 				var se = $('#second');
@@ -65,13 +66,6 @@ http://www.gnu.org/licenses/gpl.html
 					//console.log((top-pos)+'&'+windowHeight);
 					if( (top - pos)+(height/2) < windowHeight)
 					{
-						
-						//if(flag!=false)
-						//{
-							//console.log((top-pos)+'&'+windowHeight);
-							//blockSlide();
-						//}
-						//flag = false;
 						
 						$('.yp').stop().animate({top:se.height()/4,opacity:1},1000);
 						$('.shijue').stop().animate({left:(se.width()*45/100-w/2),opacity:1},1000);
@@ -87,19 +81,26 @@ http://www.gnu.org/licenses/gpl.html
 				}
 				if($this.attr('id')=='f1')
 				{
-				
-				
 					var of = $('.dword').offset().top-pos;
 					if(  (top - pos)<0 )
 					{
 						$('.dword').stop().animate({left:0,opacity:0},1000);
-			
 					}else 
 					{
 						$('.dword').stop().animate({left:'-45%',opacity:1},1000);
-						
 					}
 				}
+					if($this.attr('id')=='third')
+					{
+						console.log(top+','+pos);
+					}
+					if(  (top - pos) <0 || top > pos+($('.sword').offset().top-top))
+					{
+						$('.sword').stop().animate({left:0,opacity:0},1000);
+					}else 
+					{	
+						$('.sword').stop().animate({left:'-15%',opacity:1},1000);
+					}
 				// Check if totally above or totally below viewport
 				if (top + height < pos || top > pos + windowHeight ) {
 					return;
@@ -107,10 +108,12 @@ http://www.gnu.org/licenses/gpl.html
 				
 				if(!ypos)
 				{
-					if(Math.abs(sod)<=height*2-160)
+					 if(Math.abs(sod)<=height*2-160)
 					{
+						if($this.attr('id')=='third' || $this.attr('id')=='second')
+							sod = Math.round((top - pos) * speedFactor);
 						$this.css('backgroundPosition', xpos + " " + sod  + "px");
-					}
+					}	
 				}else
 				{
 					bgypos =Math.round(( ypos-pos ) * speedFactor)
