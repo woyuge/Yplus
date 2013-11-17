@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title> 详情</title>
+	<link href="./css/common.css?tvJ" type="text/css" rel="stylesheet">
+	<link href="./css/main.css?tvJ" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+		$('document').ready(function(){
+			var n = $('.ar_next');
+			var p = $('.ar_pre');
+			var h = $('.placeHolder img');
+			n.click(function(){
+				h.attr('src', 'images/ser2.jpg').hide().fadeIn(1000);
+				return false;
+			});
+			p.click(function(){
+				h.attr('src' , 'images/p1.png').hide().fadeIn(1000);
+				return false;
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="im_nav fix">
+		<div class="im_wrap">
+			<div class="back">
+				<span><a href="example.html">返回</a></span>
+			</div>
+			<div class="arrow">
+				<span><a class="ar_pre" href="xx">上一张</a></span>
+				<span><a class="ar_next" href="images/ser2.jpg">下一张</a></span>
+			</div>
+		</div>
+	</div>
+	<div class="placeHolder">
+		<img src='images/p1.png' />
+	</div>
+</body>
+</html>

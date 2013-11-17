@@ -67,10 +67,10 @@ http://www.gnu.org/licenses/gpl.html
 					if( (top - pos)+(height/2) < windowHeight)
 					{
 						
-						$('.yp').stop().animate({top:se.height()/4,opacity:1},1000);
+						$('.yp').stop().animate({top:se.height()/2-$('.yp').height(),opacity:1},1000);
 						$('.shijue').stop().animate({left:(se.width()*45/100-w/2),opacity:1},1000);
 						$('.jiaohu').stop().animate({right:(se.width()-($('.yp').position().left+w/2)-w),opacity:1},1000);
-						$('.sheji').stop().animate({bottom:'85',opacity:1},1000);
+						$('.sheji').stop().animate({bottom:se.height()/2-$('.sheji').height(),opacity:1},1000);
 					}else
 					{
 						$('.yp').stop().animate({top:0,opacity:0},1000);
